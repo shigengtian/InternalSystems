@@ -1,0 +1,121 @@
+{% extends "common/home_base.html" %}
+{% block cssblock %}
+    <link rel="stylesheet"
+          href="/static/common/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+
+{% endblock %}
+{% block content %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                トップページ
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> トップページ</a></li>
+                <!-- <li class="active">Dashboard</li> -->
+            </ol>
+        </section>
+        <!-- /.content -->
+        <section class="content">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">作業実績検索</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form class="col-sm-12">
+                        <div class="form-group form-inline">
+                            <label>対象月：</label>
+                            <div class="input-group date col-sm-3">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control datepicker">
+                            </div>
+                            <label>〜</label>
+                            <div class="input-group date col-sm-3">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right datepicker">
+                            </div>
+                            <div class="input-group col-sm-1">
+                                <a href="#" class="btn btn-info btn-block "><b>検索</b></a>
+                            </div>
+                            <div class="input-group col-sm-offset-1  col-sm-1">
+                                <a href="#" class="btn btn-info "><b>タイムシート提出</b></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="container">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">対象月</th>
+                            <th scope="col">出勤日数</th>
+                            <th scope="col">作業時間</th>
+                            <th scope="col">タイムシート</th>
+                            <th scope="col">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">2018-04</th>
+                            <td>22</td>
+                            <td>140</td>
+                            <td><button class="btn"><i class="fa fa-download"></i>ダウンロード</button></td>
+                            <td><button class="btn btn-success"><i class="glyphicon glyphicon-edit"></i>修正</button>
+                            <button class="btn btn-danger"><i class="glyphicon glyphicon glyphicon-trash"></i>削除</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2018-03</th>
+                            <td>21</td>
+                            <td>140</td>
+                            <td><button class="btn"><i class="fa fa-download"></i>ダウンロード</button></td>
+                            <td>修正できない</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2018-02</th>
+                            <td>20</td>
+                            <td>140</td>
+                            <td><button class="btn"><i class="fa fa-download"></i>ダウンロード</button></td>
+                            <td>修正できない</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </section>
+
+    </div>
+    <!-- /.content-wrapper -->
+{% endblock %}
+
+{% block jsblock %}
+    <script src="/static/common/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="/static/common/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="/static/common/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="/static/common/bower_components/moment/min/moment.min.js"></script>
+    <script src="/static/common/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="/static/common/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"
+            charset="UTF-8"></script>
+    <script>
+
+        $(function () {
+            //Date picker
+            $('.datepicker').datepicker({
+                autoclose: true,
+                language: 'ja',
+                viewMode: "months",
+                minViewMode: "months",
+                format: 'yyyy-mm',
+                orientation: "bottom"
+            });
+        })
+    </script>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "common/home_base.html" %}
+{% block content %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                プロファイル
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i>プロファイル</a></li>
+                <!-- <li class="active">Dashboard</li> -->
+            </ol>
+        </section>
+        <!-- /.content -->
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Profile Image -->
+                    <div class="box box-primary">
+                        <div class="box-body box-profile">
+                            <img class="profile-user-img img-responsive img-circle"
+                                 src="/static/img/staff/user4-128x128.jpg" alt="User profile picture">
+
+                            <h3 class="profile-username text-center">名前</h3>
+                            <div class="text-center col-sm-offset-4 col-sm-4">
+                                <p>
+                                    <span class="btn btn-block btn-info btn-sm">履歴書 ダウンロード　更新日：2017-03-45</span>
+                                </p>
+                            </div>
+                            <div class="box-body no-padding">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <td class="active">社員番号</td>
+                                        <td>000279</td>
+                                        <td class="active">入社日</td>
+                                        <td>2018-07-03</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">氏名</td>
+                                        <td>ああああ</td>
+                                        <td class="active">氏名（カナ）</td>
+                                        <td>カナ</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">性別</td>
+                                        <td>男</td>
+                                        <td class="active">生年月日</td>
+                                        <td>2018-07-03</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">在留資格</td>
+                                        <td>国際人文知識</td>
+                                        <td class="active">在留期限（満了日）</td>
+                                        <td>2018-07-03</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">在留カード番号</td>
+                                        <td>12312312</td>
+                                        <td class="active">国籍・地域</td>
+                                        <td>都</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">最寄駅</td>
+                                        <td>あああ</td>
+                                        <td class="active">電話番号</td>
+                                        <td>123-1123-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">住所</td>
+                                        <td colspan="3">sadfasdfasdfasdfasd</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-sm-offset-8 col-sm-2">
+                                <a href="#" class="btn btn-info btn-block" style="margin-top: 10px"><b>履歴書更新</b></a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="#" class="btn btn-primary btn-block" style="margin-top: 10px"><b>個人情報修正</b></a>
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+{% endblock %}
